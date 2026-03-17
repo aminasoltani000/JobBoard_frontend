@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { getAllJobs } from '../services/jobsServices'
+import { getAllJobs } from '../services/JobsServices'
 import { applyJob } from '../services/Candidaturesservices'
 import JobCard from '../components/JobCard'
 import JobModal from '../components/Jobmodal'
