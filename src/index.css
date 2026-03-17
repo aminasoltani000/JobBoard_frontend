@@ -1,0 +1,25 @@
+@font-face{
+  font-family: cuba;
+  src:url("../src/assets/fonts/DancingScript-Medium.ttf");
+
+}
+@font-face{
+  font-family:sekuya;
+  src:url("../src/assets/fonts/Sekuya-Regular.ttf");
+
+}
+
+
+@import "tailwindcss";
+@theme{
+  --font-sekuya:sekuya,"sans-serif";
+--font-cuba: cuba ,"sans-serif";
+--color-bleufoncer :#1E1F3A;
+--color-beige:#FAF8F6;
+--color-beigefoncer:#E8E3DD;
+--color-mauve:#6366F1;
+--color-bleuclair:#3F4C9A;
+--color-beigehero:#1E1B4B;
+--color-jaune:#EEF2FF;
+--color-cta:#E0E7FF;
+}

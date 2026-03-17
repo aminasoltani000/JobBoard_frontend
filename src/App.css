@@ -1,0 +1,199 @@
+
+
+
+@media (max-width: 768px) {
+
+/* navbar */
+    nav .max-w-7xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* ─── HERO SECTION */
+    .hero-section,
+    section[class*="py-24"] {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    /* Grille hero : 1 colonne sur mobile */
+    .hero-section .grid,
+    section .grid.md\:grid-cols-2 {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Image hero cachée sur mobile */
+    section .grid > div:last-child img[alt="hero"] {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    /* Titre hero */
+    h1[class*="text-5xl"],
+    h1[class*="text-6xl"] {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    /* ─── FEATURES SECTION */
+    section .grid.md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    /* ─── STATS SECTION */
+    .grid.md\:grid-cols-5 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+
+    /* ─── ADMIN DASHBOARD  */
+    .max-w-6xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    h1[class*="text-4xl"] {
+        font-size: 1.6rem;
+    }
+
+    /* ─── CANDIDATURES  */
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 0.8rem;
+    }
+
+    table th,
+    table td {
+        padding: 0.6rem 0.75rem;
+        white-space: nowrap;
+    }
+
+    /* Stat pills dans CandidaturesSection */
+    .flex.gap-2.flex-wrap,
+    .flex.gap-2 {
+        flex-wrap: wrap;
+    }
+
+    /* ─── JOB CARDS */
+    .grid.md\:grid-cols-2,
+    .grid.md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─── MODALS */
+    .fixed.inset-0 > div[class*="max-w"] {
+        margin: 0.75rem;
+        width: calc(100% - 1.5rem);
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+
+    .fixed.inset-0 > div .px-8 {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    /* ─── LOGIN / REGISTER FORMS */
+    .max-w-md {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .rounded-2xl.p-8 {
+        padding: 1.5rem;
+    }
+
+    /* ─── CONTACT PAGE */
+    .md\:grid-cols-2 {
+        grid-template-columns: 1fr;
+    }
+
+    /* ─── FOOTER */
+    footer .max-w-7xl {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+    }
+
+    /* ─── BOUTONS CÔTE À CÔTE → PLEINE LARGEUR */
+    .flex.gap-3 > button,
+    .flex.gap-3 > a {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* ── TABLETTE : 768px → 1024px ── */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    /* Stats : 3 colonnes sur tablette */
+    .grid.md\:grid-cols-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Features : 2 colonnes sur tablette */
+    .grid.md\:grid-cols-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section[class*="py-24"] {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    /* Hero titre */
+    h1[class*="text-6xl"] {
+        font-size: 3rem;
+    }
+}
+
+/* ── PETIT MOBILE : max-width: 480px ── */
+@media (max-width: 480px) {
+
+    /* Stats : 1 colonne sur très petit écran */
+    .grid.md\:grid-cols-5 {
+        grid-template-columns: 1fr;
+    }
+
+    h1[class*="text-5xl"],
+    h1[class*="text-6xl"] {
+        font-size: 1.75rem;
+    }
+
+    /* Boutons hero en colonne */
+    .flex.flex-wrap.gap-3 {
+        flex-direction: column;
+    }
+
+    .flex.flex-wrap.gap-3 > a,
+    .flex.flex-wrap.gap-3 > button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Modal plein écran */
+    .fixed.inset-0 > div[class*="max-w"] {
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+
+    /* Padding réduit dans les modals */
+    .fixed.inset-0 > div .px-8 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* CandidatureCard status pills en colonne */
+    .flex.items-start.justify-between.gap-3 {
+        flex-direction: column;
+    }
+}
