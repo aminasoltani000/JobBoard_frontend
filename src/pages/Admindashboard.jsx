@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getDashboardStats } from '../services/adminservices'
-import { getAllJobs, createJob, updateJob, deleteJob } from '../services/jobsServices'
+import { getAllJobs, createJob, updateJob, deleteJob } from '../services/JobsServices'
 import { getAllCandidatures, updateCandidatureStatus } from '../services/Candidaturesservices'
 import StatsSection from '../components/Statssection'
 import JobsSection from '../components/Jobssection'
