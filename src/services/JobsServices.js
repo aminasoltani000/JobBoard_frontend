@@ -1,9 +1,7 @@
 import apiClient from '../lib'
 
-export const getAllJobs = async () => {
-    const response = await apiClient.get('/jobs')
-    return response.data
-}
+const data = await getAllJobs()
+setJobs(Array.isArray(data) ? data : data.jobs || [])
 
 export const getJobById = async (id) => {
     const response = await apiClient.get(`/jobs/${id}`)
