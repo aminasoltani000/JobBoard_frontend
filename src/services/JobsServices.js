@@ -1,7 +1,9 @@
 import apiClient from '../lib'
 
-const data = await getAllJobs()
-setJobs(data)
+export const getAllJobs = async () => {
+    const response = await apiClient.get('/jobs')
+    return response.data
+}
 
 export const getJobById = async (id) => {
     const response = await apiClient.get(`/jobs/${id}`)
@@ -27,12 +29,4 @@ export const deleteJob = async (id, token) => {
         headers: { Authorization: `Bearer ${token}` }
     })
     return response.data
-}
-
-export default {
-    getAllJobs,
-    getJobById,
-    createJob,
-    updateJob,
-    deleteJob
 }
